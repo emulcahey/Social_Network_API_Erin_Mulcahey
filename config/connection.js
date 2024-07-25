@@ -1,20 +1,14 @@
 //connection to database
-const { Model, DataTypes } = require('sequelize');
-const Sequelize = require('sequelize');
-require("dotenv").config();
-const sequelize = new Sequelize('Social_Network_API_db', 'postgres', 'password',
-  {
-  host: 'localhost',
-  dialect: 'postgres',
-  logging: false
+// require("dotenv").config();
+const mongoose = require("mongoose");
+
+// mongoose connects this way: 
+function connectDb() {
+const dbURI = 'mongodb://localhost:27017/SocialDB';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connected to MongoDB'))
+    .catch(error => console.error('MongoDB connection error:', error));
 }
-);
-
-sequelize.authenticate().then(() => {
-
-  // console.log('Database connected successfully.');
-}).catch(err => {
-  console.error('Unable to connect to the database:', err);
-});
-
-module.exports = sequelize;
+// export the connection
+module.exports = connectDb;
+// module.exports = connection;

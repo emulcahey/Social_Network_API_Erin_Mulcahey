@@ -1,7 +1,7 @@
 {
   "name": "social_network_api_erin_mulcahey",
   "version": "1.0.0",
-  "description": "Building an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.",
+  "description": "Building an API for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
