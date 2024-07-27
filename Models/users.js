@@ -1,9 +1,12 @@
-const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
-const Thought = require('./Thought');
+const { Schema, model, mongoose} = require('mongoose');
+// const bcrypt = require('bcrypt');
+// const Thought = require('./Thought');
 
 const userSchema = new Schema(
     {
+        // _id: {
+        //     type: String
+        // },
         username: {
         type: String,
         required: true,
@@ -37,15 +40,25 @@ const userSchema = new Schema(
     }
     );
 
-// get total count of friends on retrieval
-userSchema.virtual('friendCount').get(function() {
-return this.friends.length;
-});
+    //{ getAllUsers, getUserById, createUser functions
+    // get all users
+    // userSchema.statics.getAllUsers = function() {
+    //     return this.find({})
+    //     .populate('users').exec();
+    // }
+    // // get user by id
+    // userSchema.statics.getUserById = function(userId) {
+    //     return this.findOne({ _id: userId })
+    //     .populate('users').exec();
+    // }
+    // // create a user
+    // userSchema.statics.createUser = function(userData) {
+    //     return this.create(userData);
+    // }
 
 
-// hash user password
-userSchema.pre('save', async function(next) {
-if (this.isNew || this.isModified('password')) {
-    const saltRounds = 10;
-    this.password = await bcrypt.hash(this.password, saltRounds);
-}})
+//export the User model with the userSchema
+// const User = model('User', userSchema);
+// module.exports = User;
+
+module.exports = mongoose.model('User', userSchema);
