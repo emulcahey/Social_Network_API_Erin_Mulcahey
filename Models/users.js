@@ -40,25 +40,4 @@ const userSchema = new Schema(
     }
     );
 
-    //{ getAllUsers, getUserById, createUser functions
-    // get all users
-    // userSchema.statics.getAllUsers = function() {
-    //     return this.find({})
-    //     .populate('users').exec();
-    // }
-    // // get user by id
-    // userSchema.statics.getUserById = function(userId) {
-    //     return this.findOne({ _id: userId })
-    //     .populate('users').exec();
-    // }
-    // // create a user
-    // userSchema.statics.createUser = function(userData) {
-    //     return this.create(userData);
-    // }
-
-
-//export the User model with the userSchema
-// const User = model('User', userSchema);
-// module.exports = User;
-
 module.exports = mongoose.model('User', userSchema);
