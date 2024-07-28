@@ -19,7 +19,6 @@ router.get('/api/thoughts/:id', (req, res) => {
 
 //post a new thought route and push the created thought's _id to the associated user's thoughts array field
 //use the username to find the user id and update the user's thoughts array field. and use the thoughtText to create the thought
-
 router.post('/api/thoughts', async (req, res) => {
     try {
         // Find the user by username to get the user's _id
@@ -44,41 +43,9 @@ router.post('/api/thoughts', async (req, res) => {
         res.status(200).json(savedThought);
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error: 'An error occurred while creating the thought.' });
+        res.status(500).json({ error: 'An error occurred while creating the thought: the entered username may not be in use.' });
     }
 });
-
-
-// router.post('/api/thoughts', (req, res) => {
-//     Thought.create(req.body)
-//         .then(({ _id }) => {
-//             return User.findOneAndUpdate(
-//                 { username: req.body.username },
-//                 { $push: { thoughts: _id } },
-//                 { new: true }
-//             );
-//         }
-//         )
-//         .then(user => {
-//             if (!user) {
-//                 return res.status(404).json({ message: 'No user found with this username' });
-//             }
-//             res.json(user);
-//         })
-//         .catch(err => res.json(err));
-// }
-// );
-
-
-// router.post('/api/thoughts', (req, res) => {
-
-//     Thought.create(req.body)
-//         .then(thought => {
-//             User.findOneAndUpdate({}, { $push: { thoughts: _id } }, { new: true })
-//             res.json(thought)
-//         })
-//         .catch(err => res.json(err));
-// });
 
 //put to update a thought by id route
 router.put('/api/thoughts/:id', (req, res) => {
