@@ -1,14 +1,13 @@
 //a table for Reaction, that has a column for reactionId that uses mongoose's objectid datatype and default value is set to a new objectid. a colum for reactionBody that is a string, required, and is 280 characters maximum. a column for username that is a string and required. a column for createdAt that is a date and is the default value to the current time stamp, use a getter method to format the timestamp on query.
 
-const { Schema, model } = require('mongoose');
-// const reactionSchema = require('./Reaction');
+const { Schema, model, mongoose } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 const reactionSchema = new Schema(
     {
         reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId()
+            type: mongoose.Types.ObjectId,
+            default: () => new mongoose.Types.ObjectId()
         },
         reactionBody: {
             type: String,
@@ -34,13 +33,4 @@ const reactionSchema = new Schema(
     }
 );
 
-// thoughtSchema.virtual('reactionCount').get(function() {
-//     return this.reactions.length;
-// }
-// );
-
-// const Thought = model('Thought', thoughtSchema);
-
 module.exports = reactionSchema;
-//export the Thought model with the thoughtSchema
-
