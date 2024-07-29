@@ -1,5 +1,4 @@
 //connection to database
-// require("dotenv").config();
 const mongoose = require("mongoose");
 
 // mongoose connects this way: 
@@ -11,4 +10,3 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 }
 // export the connection
 module.exports = connectDb;
-// module.exports = connection;

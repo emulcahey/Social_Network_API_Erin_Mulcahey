@@ -1,12 +1,6 @@
 const router = require('express').Router();
 const { mongo, default: mongoose } = require('mongoose');
-// const { getAllUsers, getUserById, createUser } = require('../../models');
 const User = require('../../Models/users');
-
-// //root route
-// router.get('/', (req, res) => {
-//     res.send('Hello World');
-// });
 
 //get all users route
 router.get('/api/users', (req, res) => {

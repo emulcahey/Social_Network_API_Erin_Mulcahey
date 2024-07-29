@@ -6,7 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 //connect to connection.js
 const connection = require('./config/connection');
-// const User = require('./models/users');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

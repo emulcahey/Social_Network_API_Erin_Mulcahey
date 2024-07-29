@@ -2,7 +2,6 @@ const router = require('express').Router();
 const Thought = require('../../Models/thoughts');
 const User = require('../../Models/users');
 const dateFormat = require('../../utils/dateFormat');
-const reactionSchema = require('../../Models/Reactions');
 
 //get all thoughts route
 router.get('/api/thoughts', (req, res) => {
@@ -18,8 +17,7 @@ router.get('/api/thoughts/:id', (req, res) => {
         .catch(err => res.json(err));
 });
 
-//post a new thought route and push the created thought's _id to the associated user's thoughts array field
-//use the username to find the user id and update the user's thoughts array field. and use the thoughtText to create the thought
+//post a new thought route and push the created thought's _id to the associated user's thoughts array field. use the username to find the user id and update the user's thoughts array field. and use the thoughtText to create the thought
 router.post('/api/thoughts', async (req, res) => {
     try {
         // Find the user by username to get the user's _id
