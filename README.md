@@ -6,7 +6,7 @@ My motivation was to build an API for a social network web application where use
 
 ## Installation
 
-To use this program, the user will need to: -Clone this repository. And, open the repository from the installed folder. -Access the integrated terminal and install npm to use the repository. -type 'node index.js' into the integrated terminal. -the user then can open insomnia and connect the pathways to use them for handling friends and comments.
+To use this program, the user will need to: -Clone this repository. And, open the repository from the installed folder. -Access the integrated terminal and install npm to use the repository. -type 'node server.js' into the integrated terminal. -the user then can open insomnia and connect the pathways to use them for handling friends and comments.
 
 ## Usage
 
