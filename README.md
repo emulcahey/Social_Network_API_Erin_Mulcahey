@@ -12,7 +12,9 @@ To use this program, the user will need to: -Clone this repository. And, open th
 
 A user can use this program to help them create tables for keeping track of information regarding a social networks set of friends, comments, and reactions. Witin the tables, the user will be able to obtain multiple groups of data and edit that data multiple ways. The user can obtain lists of all . They can obtain lists of a single . They can create . They can delete those same things as well.
 
-![alt text](assets/images/screenshot.png)
+![list of all the routes](images/routesscreenshot.png)
+![route for user creation code and results window](images/usercreatescreenshot.png)
+![route for thought creation code and previous results window](images/postcreatescreenshot.png)
 
 Walkthrough Video: 
 
