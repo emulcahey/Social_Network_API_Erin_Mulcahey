@@ -16,7 +16,7 @@ A user can use this program to help them create tables for keeping track of info
 ![route for user creation code and results window](images/usercreatscreenshot.png)
 ![route for thought creation code and previous results window](images/postcreatescreenshot.png)
 
-Walkthrough Video: 
+Walkthrough Video: [Click This Link](https://drive.google.com/file/d/1CwyK5Mq_dcgaTvRC0TpM7vdWHvLNKv9u/view?usp=sharing)
 
 ## Credits
 
